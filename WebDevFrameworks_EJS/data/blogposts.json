@@ -2,7 +2,7 @@
   "blogposts": [
     {
       "title": "Highway 401",
-      "description": "This is the 401 in rush hour at Islington road near the airport. It always sucks going through this area no matter what time of day it is.",
+      "description": "This is the 401 in rush hour at Islington road near the airport.",
       "image": "/img/hwy_401.jpg"
     },
     {
@@ -12,22 +12,22 @@
     },
     {
       "title": "TD Bank Tower - Toronto",
-      "description": "I wonder how many people work in those buildings. How they have their own lives, families, workplace drama, and floors upon floors of people.",
+      "description": "I wonder how many people work in those buildings.",
       "image": "/img/TDBankTower.jpg"
     },
     {
       "title": "Selection Sort",
-      "description": "Selection sort is a simple and efficient sorting algorithm that works by repeatedly selecting the smallest (or largest) element from the unsorted portion of the list and moving it to the sorted portion of the list. ",
+      "description": "It works by repeatedly selecting elements from the unsorted portion of the list.",
       "image": "/img/selection.webp"
     },
     {
       "title": "Bubble Sort",
-      "description": "Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order. This algorithm is not suitable for large data sets as its average and worst-case time complexity is quite high.",
+      "description": "Bubble Sort is the simplest sorting algorithm.",
       "image": "/img/bubble.webp"
     },
     {
       "title": "Insertion Sort",
-      "description": "  Insertion sort  is a simple sorting algorithm that works by iteratively inserting each element of an unsorted list into its correct position in a sorted portion of the list. It is a  stable sorting  algorithm, meaning that elements with equal values maintain their relative order in the sorted output. ",
+      "description": "  It works by iteratively inserting each element of an unsorted list into its correct position.",
       "image": "/img/cards.webp"
     }
   ]
