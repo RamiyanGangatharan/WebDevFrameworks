@@ -16,8 +16,8 @@ pagination:
 </header>
 <div class="container mt-5">
     <div class="row">
-        <% if (blogposts && blogposts.length > 0) { %>
-            <% blogposts.forEach(post => { %>
+        <% if (blog && blog.length > 0) { %>
+            <% blog.forEach(post => { %>
                 <div class="col-md-4 mb-4">
                     <div class="card h-100 shadow">
                         <img src="<%= post.image %>" style="height: 250px" class="card-img-top" alt="<%= post.title %>">
@@ -34,5 +34,5 @@ pagination:
             </div>
         <% } %>
     </div>
+    
 </div>
-

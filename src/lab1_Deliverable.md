@@ -1,7 +1,13 @@
 ---
 layout: layout/mylayout.ejs
-title: L1B
+title: Lab 1B
 ---
+
+<style>
+    .content-container { margin: 0 auto; max-width: 8.5in; padding: 20px; text-align: justify;} 
+    .content-container p { margin-bottom: 15px;} 
+    .content-container h3 { text-align: center; margin-bottom: 20px; } 
+</style>
 
 <div class="content-container">
 
@@ -300,23 +306,3 @@ On my website, Front Matter is utilized primarily to define the title of each pa
 ---
 
 </div>
-
-<style>
-/* Container for content */
-.content-container {
-        margin: 0 auto; /* Center the container */
-        max-width: 8.5in; /* Maximum width of the content */
-        padding: 20px; /* Padding for inner spacing */
-        text-align: justify; /* Justify text alignment */
-    }
-
-    /* Paragraph styles */
-.content-container p {
-        margin-bottom: 15px; /* Spacing between paragraphs */
-    }
-
-.content-container h3 {
-        text-align: center; /* Center the heading */
-        margin-bottom: 20px; /* Spacing below the heading */
-    }
-</style>

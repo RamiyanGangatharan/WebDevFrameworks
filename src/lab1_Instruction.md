@@ -1,22 +1,13 @@
 ---
 layout: layout/mylayout.ejs
-title: L1A
+title: Lab 1A
 ---
 
-<div class="container">
-    <div class="row border-bottom pb-3 mb-4 justify-content-center">
-        <div class="col-md-6 my-4  mt-5">
-            <h1 class="display-6"><%= deliverableTitle %></h1>
-        </div>
-        <div class="col-md-4 my-4 text-end">
-            <p class="mb-0"><%= institution %></p>
-            <p class="mb-0"><%= studentName %></p>
-            <p class="mb-0"><%= studentID %></p>
-            <p class="mb-0"><%= date %></p>
-            <p class="mb-0"><%= course %></p>
-        </div>
-    </div>
-</div>
+<style>
+    .content-container { margin: 0 auto; max-width: 8.5in; padding: 20px; text-align: justify;} 
+    .content-container p { margin-bottom: 15px;} 
+    .content-container h3 { text-align: center; margin-bottom: 20px; } 
+</style>
 
 <div class="content-container">
 <div class="text-center">
@@ -43,28 +34,21 @@ title: L1A
       </thead>
       <tbody>
         <tr>
-          <td>
-            <a href="https://www.11ty.dev/docs/">Get Started</a>
-          </td>
+          <td><a href="https://www.11ty.dev/docs/">Get Started</a></td>
           <td>To start an 11ty project from scratch</td>
         </tr>
         <tr>
-          <td>
-            <a href="https://www.11ty.dev/docs/layouts/">Layouts</a>
-          </td>
+          <td><a href="https://www.11ty.dev/docs/layouts/">Layouts</a></td>
           <td>To implement templates for Nunjucks (.njk)</td>
         </tr>
         <tr>
-          <td>
-            <a href="https://www.11ty.dev/docs/assets/">Adding CSS, JavaScript, Fonts</a>
-          </td>
+          <td><a href="https://www.11ty.dev/docs/assets/">Adding CSS, JavaScript, Fonts</a></td>
           <td>NOTE: Already using Bootstrap</td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
-
 
 <br>
 
@@ -129,23 +113,3 @@ title: L1A
 
 <br>
 </div>
-
-<style>
-/* Container for content */
-.content-container {
-        margin: 0 auto; /* Center the container */
-        max-width: 8.5in; /* Maximum width of the content */
-        padding: 20px; /* Padding for inner spacing */
-        text-align: justify; /* Justify text alignment */
-    }
-
-    /* Paragraph styles */
-.content-container p {
-        margin-bottom: 15px; /* Spacing between paragraphs */
-    }
-
-.content-container h3 {
-        text-align: center; /* Center the heading */
-        margin-bottom: 20px; /* Spacing below the heading */
-    }
-</style>

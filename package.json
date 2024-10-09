@@ -1,21 +1,20 @@
 {
-  "name": "11ty_class",
+  "name": "webdevframeworks-11ty",
   "version": "1.0.0",
-  "description": "",
+  "description": "Web Developement Frameworks Assignment",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx @11ty/eleventy",
     "dev": "npx @11ty/eleventy --serve"
   },
-  "author": "Zaid Ali (100760439)",
+  "author": "Ramiyan Gangatharan [100835223]",
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@fortawesome/fontawesome-free": "^6.6.0",
     "bootstrap": "^5.3.3",
     "ejs": "^3.1.10",
-    "eleventy-plugin-youtube-embed": "^1.11.0",
     "fs-extra": "^11.2.0",
     "markdown-it": "^14.1.0"
   }
