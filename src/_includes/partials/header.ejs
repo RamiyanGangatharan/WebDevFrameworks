@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <!-- Toggle button for mobile view -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Navbar links -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/" aria-current="page">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <!-- Dropdown for Lab 1 -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="lab1Dropdown" role="button"
+                       data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Lab 1
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="lab1Dropdown">
+                        <li><a class="dropdown-item" href="/lab1_Instruction">Instruction</a></li>
+                        <li><a class="dropdown-item" href="/lab1_Deliverable">Deliverable</a></li>
+                    </ul>
+                </li>
+                <!-- Dropdown for Assignment 1 -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="assignment1Dropdown" role="button"
+                       data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Assignment 1
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="assignment1Dropdown">
+                        <li><a class="dropdown-item" href="/A1_Instruction">Instruction</a></li>
+                        <li><a class="dropdown-item" href="/A1_Deliverable">Deliverable</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- CSS -->
+<style>
+    /* Center the navbar links */
+    .navbar-nav {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    /* Hover effects for links */
+    .nav-link:hover {
+        font-weight: bold;
+        color: #f8f9fa;
+    }
+
+    /* Focus styles for better keyboard navigation */
+    .dropdown-item:focus {
+        background-color: #343a40;
+        color: #fff;
+    }
+
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+
+    /* Adjust dropdowns so they appear below the links */
+    .dropdown-menu {
+        top: 100%;
+        left: 0;
+        right: 0;
+    }
+
+    /* Make the links evenly spaced */
+    .nav-item {
+        margin: 0 10px;
+    }
+</style>
