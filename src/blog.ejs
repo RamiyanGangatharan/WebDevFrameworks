@@ -1,0 +1,38 @@
+---
+layout: layout/mylayout.ejs
+title: Blog
+
+pagination:
+    data: blogposts
+    size: 3
+    alias: blog
+---
+
+<header class="py-5 text-center">
+    <div class="container">
+        <h1 class="display-1"><%= title %></h1>
+        <p class="lead">Sharing thoughts.</p>
+    </div>
+</header>
+<div class="container mt-5">
+    <div class="row">
+        <% if (blog && blog.length > 0) { %>
+            <% blog.forEach(post => { %>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 shadow">
+                        <img src="<%= post.image %>" style="height: 250px" class="card-img-top" alt="<%= post.title %>">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= post.title %></h5>
+                            <p class="card-text"><%= post.description %></p>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        <% } else { %>
+            <div class="col-12">
+                <div class="alert alert-warning" role="alert">No blog posts available.</div>
+            </div>
+        <% } %>
+    </div>
+    
+</div>
