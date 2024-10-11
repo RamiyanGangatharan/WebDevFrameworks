@@ -16,5 +16,10 @@ title: Web Development
 </style>
 
 <div class="content-container">
+<h1 class="text-center display-1">Web Development</h1>
+<br>
 
+![image](/img/WD.jpg)
+
+<br>
 </div>

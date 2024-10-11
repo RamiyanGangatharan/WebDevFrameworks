@@ -16,5 +16,12 @@ title: Quick Sort
 </style>
 
 <div class="content-container">
+<h1 class="text-center display-1">Quick Sort</h1>
+
+<br>
+
+![image](/img/QuickSort.png)
+
+<br>
 
 </div>

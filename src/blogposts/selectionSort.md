@@ -16,5 +16,10 @@ title: Select Sort
 </style>
 
 <div class="content-container">
+<h1 class="text-center display-1">Selection Sort</h1>
+<br>
 
+![image](/img/Select.png)
+
+<br>
 </div>
