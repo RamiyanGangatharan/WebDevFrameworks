@@ -91,8 +91,10 @@ Source: [Payload](https://payloadcms.com/)
 ---
 
 #### My Choice in CMS
-My choice in CMS will be Ghost as I am creating a blog website for this class. My style is minimalistic yet complex and Ghost matches that vibe. 
-This CMS will make it easier to create my blogposts and expand my site. at first I chose this CMS because it was what Adam was using but then realized
-that I also wanted to learn Docker and a modern CMS anyway (conveniently) as that is an employment requirement nowadays.
-
+I've decided to use Strapi as my Content Management System (CMS) of choice. Strapi offers several appealing features, but what initially caught 
+my attention is that NASA uses it — a testament to its reliability and potential for scalability. Over my three years at Durham College, I've learned 
+a lot of the core technologies behind Strapi, making it a great fit that aligns with my knowledge base. As an open-source CMS, Strapi evolves based 
+on community feedback, prioritizing the features users genuinely need over shareholder-driven decisions. Built on Node.js, Strapi is continuously 
+updated with the latest tech improvements, ensuring it stays relevant and secure. Additionally, the extensive documentation on both Strapi itself and 
+its REST and GraphQL APIs makes it easier to learn and troubleshoot, promising a smooth development experience and effective integration with other technologies.
 </div>
