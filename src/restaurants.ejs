@@ -1,0 +1,30 @@
+---
+layout: layout/mylayout.ejs
+title: Restaurants
+
+pagination:
+    data: rs
+    size: 3
+    alias: post
+---
+
+<div class="container mt-5">
+    <div class="row">
+        <% pagination.items.forEach(post => { %>
+            <div class="card" style="width: fit-content;">
+                <h2 class="card-title"><%= post.Name %></h2>
+                <div class="card-body">
+                    <%
+                        let descriptionText = post.Description;
+                        try {
+                            const parsedDescription = JSON.parse(post.Description);
+                            descriptionText = parsedDescription[0]?.children[0]?.text || "No description available";
+                        } 
+                        catch (e) { descriptionText = post.Description || "No description available"; }
+                    %>
+                    <p><%= descriptionText %></p>
+                </div>
+            </div>
+        <% }); %>
+    </div>
+</div>

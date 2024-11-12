@@ -8,5 +8,28 @@ export default function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./src/img");
     eleventyConfig.setTemplateFormats(["md", "ejs", "njk"]);
 
-    return {dir: {output: OUTPUT, input: INPUT}};
+    // Fetch restaurants and return only the data array
+    eleventyConfig.addGlobalData("rs", async() => {
+        try {
+            const response = await fetch("http://localhost:1337/api/restaurants");
+            if (!response.ok) 
+                {
+                    throw new Error(`Failed to fetch Strapi data: ${response.statusText}`);
+                }
+            const data = await response.json();
+            console.log("Fetched Data:", JSON.stringify(data, null, 2)); 
+            return data.data; 
+        } catch (error) {
+            console.error("Error fetching restaurants from Strapi:", error);
+            return [];
+        }
+    });
+    
+
+    return {
+        dir: {
+            output: OUTPUT,
+            input: INPUT
+        }
+    };
 }

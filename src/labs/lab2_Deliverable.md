@@ -21,6 +21,8 @@ title: Lab 2B
 
 ---
 
+Installation Guide Links: [Ghost](https://isantoshmehta.medium.com/how-to-install-ghost-cms-locally-on-your-computer-8ee70417611e) |  [Strapi](https://strapi.io/blog/mastering-api-requests-using-fetch-with-strapi-content-api)
+
 According to [Medium](https://medium.com/@d.mcburney/what-really-is-a-headless-cms-and-why-would-you-consider-one-an-explainer-for-everyone-cd1ad64a49f4), 
 a content management system (CMS) traditionally manages an entire website as a single, monolithic structure. A headless CMS, however, separates 
 content management from website rendering, allowing you to log in, make updates, and then have the CMS regenerate your site automatically. 
