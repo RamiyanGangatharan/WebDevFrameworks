@@ -12,7 +12,7 @@
     <header><%- include('../partials/workHeader.ejs') %></header>
     <main class="container"><%- content %></main>
 
-    <% if (title === "Blog") { %><%- include('../partials/paging.ejs') %><% } %>
+    <% if (title === "Blog" || title === "Restaurants") { %><%- include('../partials/paging.ejs') %><% } %>
 
     <br>
 

@@ -24,6 +24,13 @@
       "mappedBy": "restaurants"
     },
     "Description": {
+      "type": "text"
+    },
+    "Location": {
+      "type": "string",
+      "required": true
+    },
+    "Rating": {
       "type": "string"
     }
   }

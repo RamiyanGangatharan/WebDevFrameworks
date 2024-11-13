@@ -17,7 +17,7 @@ export default function(eleventyConfig) {
                     throw new Error(`Failed to fetch Strapi data: ${response.statusText}`);
                 }
             const data = await response.json();
-            console.log("Fetched Data:", JSON.stringify(data, null, 2)); 
+            console.log("Fetched Data:", data);
             return data.data; 
         } catch (error) {
             console.error("Error fetching restaurants from Strapi:", error);
