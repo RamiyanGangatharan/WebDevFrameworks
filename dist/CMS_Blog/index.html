@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strapi Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <header><nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <!-- Core Pages -->
+                <li class="nav-item"><a class="nav-link" href="/" aria-current="page">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="/CMS_Blog">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="/restaurants">Restaurant Review</a></li>
+
+                <!-- Notes (outside of /core/) -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="notesDropdown" role="button"
+                       data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Notes</a>
+                    <ul class="dropdown-menu" aria-labelledby="notesDropdown">
+                        <li><a class="dropdown-item" href="/notes/FrameworksNotes">Frameworks</a></li>
+                        <li><a class="dropdown-item" href="/notes/MainFrameCICS">Mainframe CICS</a></li>
+                        <li><a class="dropdown-item" href="/notes/FieldPlacementNotes">Field Placement</a></li>
+                    </ul>
+                </li>
+                
+                <!-- Labs (outside of /core/) -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="lab1Dropdown" role="button"
+                       data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lab 1</a>
+                    <ul class="dropdown-menu" aria-labelledby="lab1Dropdown">
+                        <li><a class="dropdown-item" href="/labs/lab1_Instruction">Instruction</a></li>
+                        <li><a class="dropdown-item" href="/labs/lab1_Deliverable">Deliverable</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="lab2Dropdown" role="button"
+                       data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Lab 2</a>
+                    <ul class="dropdown-menu" aria-labelledby="lab2Dropdown">
+                        <li><a class="dropdown-item" href="/labs/lab2_Instruction">Instruction</a></li>
+                        <li><a class="dropdown-item" href="/labs/lab2_Deliverable">Deliverable</a></li>
+                    </ul>
+                </li>
+                
+                <!-- Assignments (outside of /core/) -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="assignment1Dropdown" role="button"
+                       data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Assignment 1</a>
+                    <ul class="dropdown-menu" aria-labelledby="assignment1Dropdown">
+                        <li><a class="dropdown-item" href="/assignments/A1_Instruction">Instruction</a></li>
+                        <li><a class="dropdown-item" href="/assignments/A1_Deliverable">Deliverable</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+</header>
+    <header>
+
+
+
+
+
+
+
+
+
+</header>
+    <main class="container">
+<div class="container-fluid mt-1 text-center">
+    <h1 class="display-1 text-center">Blog</h1>
+    <p class="subtitle text-center">Sharing Ideas with Strapi - Ramiyan Gangatharan</p>
+
+    <div class="row">
+        
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h2 class="card-title display-5 fw-bold mb-3">Bubble Sort</h2>
+                        <div class="card-text">
+                            <p><strong>Bubble Sort</strong> is a simple comparison-based sorting algorithm. It works by repeatedly stepping through the list to be sorted, comparing adjacent elements, and swapping them if they are in the wrong order. This process continues until the list is completely sorted. The algorithm gets its name from the way smaller elements &quot;bubble&quot; to the top of the list (or the start) after each pass.</p>
+<p>The algorithm repeatedly compares pairs of adjacent elements in the list and swaps them if the first element is greater than the second. After each full pass through the list, the largest unsorted element is guaranteed to be in its final position. This process is repeated for the remaining unsorted elements until no swaps are needed, indicating the list is sorted.</p>
+<p>Although <strong>Bubble Sort</strong> is simple to implement and understand, it is not very efficient for large datasets. In the worst-case scenario (when the list is sorted in reverse), it has a time complexity of <strong>O(n²)</strong>, where <em>n</em> is the number of elements in the list. This quadratic time complexity makes Bubble Sort inefficient for large lists, but it is still useful for educational purposes and small datasets where simplicity is more important than speed.</p>
+<p>One advantage of Bubble Sort is that it operates in place, meaning it does not require extra memory for another array. However, other more efficient algorithms like <strong>Merge Sort</strong> or <strong>Quick Sort</strong> are usually preferred for larger or more complex sorting tasks.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h2 class="card-title display-5 fw-bold mb-3">Big O Notation</h2>
+                        <div class="card-text">
+                            <h3>What is this notation?</h3>
+<p>According to <a href="https://en.wikipedia.org/wiki/Big_O_notation">Wikipedia</a>, 
+<em>&quot;Big O notation is a mathematical notation that describes the limiting behavior of a function when the argument tends towards a particular value or infinity. Big O is a member of a family of notations invented by German mathematicians Paul Bachmann, Edmund Landau, and others, collectively called Bachmann–Landau notation or asymptotic notation. The letter O was chosen by Bachmann to stand for Ordnung, meaning the order of approximation. In computer science, big O notation is used to classify algorithms according to how their run time or space requirements grow as the input size grows. In analytic number theory, big O notation is often used to express a bound on the difference between an arithmetical function and a better understood approximation; a famous example of such a difference is the remainder term in the prime number theorem. Big O notation is also used in many other fields to provide similar estimates. Big O notation characterizes functions according to their growth rates: different functions with the same asymptotic growth rate may be represented using the same O notation. The letter O is used because the growth rate of a function is also referred to as the order of the function. A description of a function in terms of big O notation usually only provides an upper bound on the growth rate of the function. Associated with big O notation are several related notations, using the symbols o, Ω, ω, and Θ, to describe other kinds of bounds on asymptotic growth rates.&quot;</em></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h2 class="card-title display-5 fw-bold mb-3">Graph Theory</h2>
+                        <div class="card-text">
+                            <p>Graph theory explores mathematical structures known as graphs, which model relationships between objects. A graph consists of vertices (or nodes) connected by edges (or links) that represent pairwise connections. These graphs can be either directed, where edges have a specified direction, or undirected, where they do not. They can also be weighted or unweighted, depending on whether numerical values (weights) are assigned to edges. Key concepts in graph theory include vertices and edges as core components, with adjacency defining the relationship between connected vertices and degree referring to the number of edges incident to a vertex. Paths represent sequences of edges connecting vertices, and cycles are paths that begin and end at the same vertex. A connected graph has a path between every pair of vertices, while a subgraph is a subset of vertices and edges from a larger graph that still forms a graph. These concepts are foundational in computer science, where graphs are used to represent systems like social networks, transportation grids, the internet, and software dependencies.</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+
+<style>
+    /* Newspaper Style */
+    body {
+        font-family: 'Georgia', serif;
+        line-height: 1.6;
+        background-color: #f4f4f4;
+    }
+
+    .container {
+        max-width: 3000px; /* Wider width for a more expansive layout */
+    }
+
+    /* Use a fluid container for full screen width */
+    .container-fluid {
+        width: 100%;
+    }
+
+    .card {
+        border: none;
+        background-color: #ffffff;
+        padding: 15px;
+    }
+
+    h2.card-title {
+        font-size: 1.5rem;
+        color: #333;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        color: #555;
+        text-align: justify;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+</style></main>
+
+    <nav aria-label="Page navigation" class="mt-4">
+    <ul class="pagination justify-content-center">
+        
+
+        
+
+        
+            <li class="page-item">
+                <a class="page-link" href="/CMS_Blog/1/">Next</a>
+            </li>
+        
+    </ul>
+</nav>
+
+    <br>
+
+    <footer class="text-center"><div class="container">
+    <p class="mb-1">&copy; <span id="copyrightYear"></span> Ramiyan Gangatharan - 100835223</p>
+    <ul class="list-inline">
+        <li class="list-inline-item"><a href="/" class="text-muted">Home</a></li>
+        <li class="list-inline-item"><a href="/blog" class="text-muted">Blog</a></li>
+        <li class="list-inline-item"><a href="https://www.linkedin.com/in/ramiyan-gangatharan/" class="text-muted">LinkedIn</a></li>
+        <li class="list-inline-item"><a href="/TOC" class="text-muted">Terms &amp; Conditions</a></li>
+    </ul>
+</div>
+<script>document.getElementById("copyrightYear").textContent = new Date().getFullYear();</script></footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous">
+    </script>
+</body>
+</html>
