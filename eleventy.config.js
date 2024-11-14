@@ -1,5 +1,4 @@
 import ejsPlugin from "@11ty/eleventy-plugin-ejs";
-import marked from "marked";
 
 export default function(eleventyConfig) {
     const OUTPUT = "dist";
@@ -43,10 +42,6 @@ export default function(eleventyConfig) {
         }
     });
 
-    // Add a custom filter to process Markdown with marked
-    eleventyConfig.addFilter("markdown", (content) => {
-        return marked(content); // Converts Markdown to HTML
-    });
 
     // Customizing the output dir for the 404 page
     return {

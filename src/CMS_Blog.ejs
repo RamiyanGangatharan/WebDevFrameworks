@@ -9,5 +9,4 @@ pagination:
 ---
 <% pagination.items.forEach(post => { %>
     <h1 class="display-1 text-center m-5"><%= post.Header %></h1>
-    <p class="lead"><%- marked(post.Content) %></p>
 <% }); %>
