@@ -21,8 +21,13 @@ export default function(eleventyConfig) {
         return labs.map(post => ({...post, Content: marked(post.Content)}));
     });
 
-    // eleventyConfig.addGlobalData("assignments", async() => {
-    //     const labs = await fetchStrapiData("assignments", "assignment content");
-    //     return labs.map(post => ({...post, Content: marked(post.Content)}));
+    eleventyConfig.addGlobalData("assignments", async() => {
+        const assignments = await fetchStrapiData("assignments", "assignment content");
+        return assignments.map(post => ({...post, Content: marked(post.Content)}));
+    });
+
+    // eleventyConfig.addGlobalData("notes", async() => {
+    //     const notes = await fetchStrapiData("assignments", "assignment content");
+    //     return notes.map(post => ({...post, Content: marked(post.Content)}));
     // });
 }

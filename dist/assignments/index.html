@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Lab 2A</title>
+        <title>Assignment 1A</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
             rel="stylesheet" 
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
@@ -48,9 +48,9 @@
                 <h1 class="display-6 text-center">
                     
                     
+                    A1 Instruction: Lab 1 Revision
                     
                     
-                    Lab 2 Instruction: Headless CMS
                     
                     
                     
@@ -63,7 +63,7 @@
                         <p class="card-text mb-2">Ramiyan Gangatharan</p>
                         <p class="card-text mb-2">100835223</p>
                         <p class="card-text mb-2">
-                            November 1, 2024
+                            October 4, 2024
                         </p>
                         <p class="card-text text-muted mb-0">Web Development: Frameworks</p>
                     </div>
@@ -82,72 +82,106 @@
     .content-container h3 { text-align: center; margin-bottom: 20px; } 
 </style>
 
-<h2>Objective</h2>
-<p>Research and implement several headless CMS systems to determine the best fit for your project. This task involves:</p>
+<div class="content-container">
+<h5 class="text-center card-title">Helpful Links</h5>
+
+<p class="text-center">
+    <a href="https://www.11ty.dev/docs/">11ty Docs</a> |
+    <a href="https://www.11ty.dev/docs/collections/">Collections</a> |
+    <a href="https://www.11ty.dev/docs/pages-from-data/">Create Pages From Data</a> |
+    <a href="https://www.11ty.dev/docs/pagination/">Pagination</a>
+</p>
+
+<hr>
+<h4>Instructions</h4>
+<p>You will create an 11ty project demonstrating the concepts of modern web development practices.</p>
+<p><strong>NOTE</strong>: Lab 1 is the starting point of assignment 1. You are simply adding onto Lab 1 through Assignment 1.</p>
+<h5>Your project will:</h5>
+<br>
+
 <ul>
-<li>Researching five popular headless CMS options.</li>
-<li>Implementing and experimenting with each CMS on separate copies of your website.</li>
-<li>Providing proof of your work through screenshots, code samples, or a video.</li>
-<li>Submitting your findings in markdown format or using your chosen template engine.</li>
+<li>Utilize a eleventy.config.js file for configuration<ul>
+<li>Store your application code in a <code>src</code> folder, and your build artifacts in a <code>dist</code> folder.</li>
+<li>Use <code>passthroughCopy</code> to ensure your css and images are copied into your <code>dist</code> folder.</li>
+<li>Add a watch target to your <code>css</code> folder so that when your styles change, the watch server automatically rebuilds.<ul>
+<li>For a bonus point, configure <code>SASS</code> and create at least 5 custom styles with it to show that it works and you understand what it&#39;s doing.</li>
 </ul>
-<h2>Step-by-Step Instructions</h2>
-<h3>Research Headless CMS Options</h3>
-<p>Start by researching five headless CMS platforms. Some popular options include:</p>
+</li>
+<li>Listen for the <code>eleventy.before</code> event and have it delete your entire <code>dist</code> folder before your build step starts.</li>
+</ul>
+</li>
+</ul>
+<p><em><strong>NOTE: I am required to use a different templating engine than Nunjucks so I scrapped 11ty as I am using EJS and Express.js</strong></em></p>
 <ul>
-<li><strong>Strapi</strong></li>
-<li><strong>Contentful</strong></li>
-<li><strong>Sanity</strong></li>
-<li><strong>Prismic</strong></li>
-<li><strong>Ghost</strong></li>
-</ul>
-<p>You are not limited to these options, so feel free to explore others if you find something that better suits your project requirements. Write a brief overview of each CMS, including:</p>
+<li><p>Use a template engine that&#39;s not Nunjucks.</p>
+</li>
+<li><p>Use front matter in content files for metadata.</p>
+</li>
+<li><p>Reuse layout files to maintain structural consistency.</p>
+</li>
+<li><p>Handle static assets, your site should include some images and some custom styles.</p>
+</li>
+<li><p>Create <code>header</code> and <code>footer</code> partials.</p>
 <ul>
-<li>Key features</li>
-<li>Strengths and limitations</li>
-<li>Typical use cases</li>
-<li>Pricing structure (if applicable)</li>
+<li>Your main navigation should live in your <code>header</code> file.</li>
+<li>The footer should include your full name, a copyright symbol, and the current year.  Use JavaScript to put the year here so it stays up to date over time.<ul>
+<li>If you want, add links to your socials in the footer.</li>
 </ul>
-<h3>Select One CMS to Use</h3>
-<p>After evaluating each option, select the CMS that best meets your project needs and goals.</p>
-<h3>Implement and Experiment with Each CMS</h3>
-<p>To get hands-on experience, create a few copies of your website and integrate each CMS separately. As you work with each CMS:</p>
+</li>
+</ul>
+</li>
+<li><p>Create other static pages,</p>
 <ul>
-<li>Observe how it impacts your workflow.</li>
-<li>Take note of setup complexity, ease of use, and compatibility with your project’s requirements.</li>
-<li>Experiment with content management and deployment to get a feel for the CMS’s capabilities.</li>
+<li>An <code>about</code> page that includes some details about yourself.  Include a way for potential employers to contact you.</li>
+<li>A <code>404</code> page that gets redirected to when a page is not found.  Configure the 11ty server so that it uses this page.</li>
+<li>A <code>terms-and-conditions</code> page, you can use GenAI or grab a template from online to populate this page.<ul>
+<li>Put a link to this page in your footer.</li>
 </ul>
-<h3>Provide Proof of Work</h3>
-<p>Document your experimentation through one or more of the following:</p>
+</li>
+</ul>
+</li>
+<li><p>Organize content with the use of collections and pagination.</p>
 <ul>
-<li><strong>Screenshots</strong>: Capture key points in your integration process.</li>
-<li><strong>Code Samples</strong>: Include any code that demonstrates how you integrated each CMS.</li>
-<li><strong>Video</strong>: Create a short walkthrough of your setup and integration experience.</li>
+<li>Create a partial template for your pagination control.</li>
+<li>Style the control with bootstrap classes.</li>
+<li>The page number you&#39;re currently on should be <code>active</code>.</li>
+<li>Include <code>Next</code> and <code>Previous</code> buttons.<ul>
+<li>If you&#39;re on the first page, <code>Previous</code> should be disabled.</li>
+<li>If you&#39;re on the last page, <code>Next</code> should be disabled.</li>
 </ul>
-<p>This proof of work will help showcase your ability to evaluate and implement new technologies, an essential skill for future projects and employers.</p>
-<h3>Submission Guidelines</h3>
-<p>Embed your final write-up and proof of work within your ongoing project. Use markdown (or your chosen template engine) to format your findings and reflections. Ensure the submission is accessible by:</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>The theme/content of your site is your own to choose.  Be as creative as you’d like.<br>You may look at the starter project for inspiration, but your final project should be substantially different.</p>
+<p>Further, you will provide documentation that indicates all key aspects of the project and guidance on how to maintain it.
+If the scope of the project has significantly shifted since Lab 1, this is not necessarily a problem, but indicate how and why.</p>
+<h3>Grading Summary</h3>
+<p>For specifics, see the assignment rubric on DC Connect.</p>
 <ul>
-<li>Adding a link to your CMS exploration in the project header, or</li>
-<li>Placing it in an obvious spot on the main page for easy access.</li>
+<li><p>/5 functionality</p>
+</li>
+<li><p>/5 creativity and design</p>
+</li>
+<li><p>/5 documentation</p>
+</li>
+<li><p>/5 understanding of project requirements</p>
+</li>
+<li><p>-5 (25%) late</p>
+</li>
+<li><p>-20 (100%) more than 72 hours late</p>
+</li>
 </ul>
-<h2>Deliverables</h2>
-<p>Your submission should include:</p>
-<ul>
-<li>A written overview of each CMS you researched.</li>
-<li>A brief explanation of the CMS you chose for your project and why.</li>
-<li>Proof of work demonstrating your experimentation with each CMS.</li>
-<li>A clear link to your submission embedded within your project.</li>
-</ul>
-</div></article>
+</div></div></article>
             
 
             <nav aria-label="Page navigation" class="mt-4">
     <ul class="pagination justify-content-center">
-        <li class="page-item"><a class="page-link" href="/labs/1/">Previous</a></li>
+        
         
         
 
-        <li class="page-item"><a class="page-link" href="/labs/3/">Next</a></li>
+        <li class="page-item"><a class="page-link" href="/assignments/1/">Next</a></li>
     </ul>
 </nav>
         </main>
