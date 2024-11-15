@@ -10,8 +10,19 @@ async function fetchStrapiData(endpoint, description) {
 
 export default function(eleventyConfig) {
     eleventyConfig.addGlobalData("rs", () => fetchStrapiData("restaurants", "restaurant data"));
-    eleventyConfig.addGlobalData("bp", async () => {
+
+    eleventyConfig.addGlobalData("bp", async() => {
         const blogPosts = await fetchStrapiData("blogs", "blog posts");
         return blogPosts.map(post => ({ ...post, Content: marked(post.Content) }));
     });
+
+    eleventyConfig.addGlobalData("labs", async() => {
+        const labs = await fetchStrapiData("labs", "lab content");
+        return labs.map(post => ({...post, Content: marked(post.Content)}));
+    });
+
+    // eleventyConfig.addGlobalData("assignments", async() => {
+    //     const labs = await fetchStrapiData("assignments", "assignment content");
+    //     return labs.map(post => ({...post, Content: marked(post.Content)}));
+    // });
 }

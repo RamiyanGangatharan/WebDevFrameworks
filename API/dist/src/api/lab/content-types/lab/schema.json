@@ -1,0 +1,22 @@
+{
+    "kind": "collectionType",
+    "collectionName": "labs",
+    "info": {
+        "singularName": "lab",
+        "pluralName": "labs",
+        "displayName": "lab",
+        "description": ""
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "Title": {
+            "type": "string"
+        },
+        "Content": {
+            "type": "richtext"
+        }
+    }
+}

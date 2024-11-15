@@ -1,0 +1,13 @@
+---
+layout: layout/mylayout.ejs
+
+pagination:
+  data: labs
+  size: 1
+  alias: post
+
+eleventyComputed: 
+    title: <%- post.Title %>
+---
+
+<article><div><%- post.Content %></div></article>
