@@ -23,9 +23,22 @@ export default function(eleventyConfig) {
         const assignments = await fetchStrapiData("assignments", "assignment content");
         return assignments.map(post => ({...post, Content: marked(post.Content)}));
     });
+    
+    eleventyConfig.addGlobalData("WDF", async () => {
+        const notes = await fetchStrapiData("notes", "WDF note content");
+        const sortedNotesAscending = notes.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+        return sortedNotesAscending.map(post => ({ ...post, Content: marked(post.Content) }));
+    });
 
-    // eleventyConfig.addGlobalData("notes", async() => {
-    //     const notes = await fetchStrapiData("assignments", "assignment content");
-    //     return notes.map(post => ({...post, Content: marked(post.Content)}));
-    // });
+    eleventyConfig.addGlobalData("CICS", async () => {
+        const notes = await fetchStrapiData("mainframes", "CICS content");
+        const sortedNotesAscending = notes.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+        return sortedNotesAscending.map(post => ({ ...post, Content: marked(post.Content) }));
+    });
+
+    eleventyConfig.addGlobalData("FP", async () => {
+        const notes = await fetchStrapiData("field-placements", "FP content");
+        const sortedNotesAscending = notes.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+        return sortedNotesAscending.map(post => ({ ...post, Content: marked(post.Content) }));
+    });
 }

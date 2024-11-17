@@ -10,4 +10,6 @@ eleventyComputed:
     title: <%- post.Title %>
 ---
 
-<article><div><%- post.Content %></div></article>
+<% pagination.items.forEach(post => { %>
+  <article><div><%- post.Content %></div></article>
+<% }); %>

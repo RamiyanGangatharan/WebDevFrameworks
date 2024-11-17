@@ -20,14 +20,19 @@
             <%- content %>
             <% if ([].includes(title)) { %><%- include('../partials/paging.ejs') %><% } %>
 
-            <% if (
-                    [
+            <% if ([
                         "Strapi Blog", 
+
                         "Lab 1A", "Lab 1B", 
                         "Lab 2A", "Lab 2B", 
+
                         "Assignment 1A", "Assignment 1B", 
-                        "Assignment 2A", "Assignment 2B"
-                    ].includes(title)) { %><%- include('../partials/paging.ejs') %><% } %>
+                        "Assignment 2A", "Assignment 2B", 
+
+                        "WDF", "CICS", "Placement"
+                    ]
+                    .includes(title)) { %><%- include('../partials/paging.ejs') %>
+            <% } %>
         </main>
 
         <footer class="text-center mt-4"><%- include('../partials/footer.ejs') %></footer>
