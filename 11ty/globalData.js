@@ -3,42 +3,23 @@ import { marked } from 'marked';
 async function fetchStrapiData(endpoint, description) {
     try {
         const response = await fetch(`http://localhost:1337/api/${endpoint}`);
-        if (!response.ok) {throw new Error(`Failed to fetch ${description}: ${response.statusText}`);}
+        if (!response.ok) { throw new Error(`Failed to fetch ${description}: ${response.statusText}`);}
         return (await response.json()).data;
-    } catch (error) {console.error(`Error fetching ${description} from Strapi:`, error); return [];}
+    } 
+    catch (error) {console.error(`Error fetching ${description} from Strapi:`, error); return [];}
+}
+
+async function fetchAndProcessData(endpoint, description) {
+    const data = await fetchStrapiData(endpoint, description);
+    const sortedData = data.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
+    return sortedData.map(post => ({ ...post, Content: marked(post.Content) }));
 }
 
 export default function(eleventyConfig) {
-    eleventyConfig.addGlobalData("bp", async() => {
-        const blogPosts = await fetchStrapiData("blogs", "blog posts");
-        return blogPosts.map(post => ({ ...post, Content: marked(post.Content) }));
-    });
-
-    eleventyConfig.addGlobalData("labs", async() => {
-        const labs = await fetchStrapiData("labs", "lab content");
-        return labs.map(post => ({...post, Content: marked(post.Content)}));
-    });
-
-    eleventyConfig.addGlobalData("assignments", async() => {
-        const assignments = await fetchStrapiData("assignments", "assignment content");
-        return assignments.map(post => ({...post, Content: marked(post.Content)}));
-    });
-    
-    eleventyConfig.addGlobalData("WDF", async () => {
-        const notes = await fetchStrapiData("notes", "WDF note content");
-        const sortedNotesAscending = notes.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
-        return sortedNotesAscending.map(post => ({ ...post, Content: marked(post.Content) }));
-    });
-
-    eleventyConfig.addGlobalData("CICS", async () => {
-        const notes = await fetchStrapiData("mainframes", "CICS content");
-        const sortedNotesAscending = notes.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
-        return sortedNotesAscending.map(post => ({ ...post, Content: marked(post.Content) }));
-    });
-
-    eleventyConfig.addGlobalData("FP", async () => {
-        const notes = await fetchStrapiData("field-placements", "FP content");
-        const sortedNotesAscending = notes.sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt));
-        return sortedNotesAscending.map(post => ({ ...post, Content: marked(post.Content) }));
-    });
+    eleventyConfig.addGlobalData("bp", async () => await fetchAndProcessData("blogs", "blog posts"));
+    eleventyConfig.addGlobalData("labs", async () => await fetchAndProcessData("labs", "lab content"));
+    eleventyConfig.addGlobalData("assignments", async () => await fetchAndProcessData("assignments", "assignment content"));
+    eleventyConfig.addGlobalData("WDF", async () => await fetchAndProcessData("notes", "WDF note content"));
+    eleventyConfig.addGlobalData("CICS", async () => await fetchAndProcessData("mainframes", "CICS content"));
+    eleventyConfig.addGlobalData("FP", async () => await fetchAndProcessData("field-placements", "FP content"));
 }
