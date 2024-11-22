@@ -10,7 +10,6 @@
             crossorigin="anonymous">
     </head>
     <body>
-        <!-- Header -->
         <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
@@ -73,12 +72,33 @@
         </div>
     </div>
 
+            
+                <div class="text-center mt-4 mb-4">
+    <nav class="navbar-expand-lg navbar-light bg-transparent">
+        <div class="container-fluid d-flex justify-content-center">
+            <ul class="navbar-nav d-flex flex-wrap justify-content-center">
+                <li class="nav-item me-2"><div class="card text-center"><a class="nav-link card-body p-3" href="http://localhost:8080/assignments/">Assignment 1A</a></div></li>
+                <li class="nav-item me-2"><div class="card text-center"><a class="nav-link card-body p-3" href="http://localhost:8080/assignments/1/">Assignment 1B</a></div></li>
+                <li class="nav-item me-2"><div class="card text-center"><a class="nav-link card-body p-3" href="http://localhost:8080/assignments/2/">Assignment 2A</a></div></li>
+                <li class="nav-item me-2"><div class="card text-center"><a class="nav-link card-body p-3" href="http://localhost:8080/assignments/3/">Assignment 2B</a></div></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="text-center text-muted"><small>navigate here</small></div>
+</div>
+            
+            
         </header>
     
         <main class="container my-4">
             
 
-  <article><div><style>
+  <article>
+    <img 
+        class="rounded mx-auto mb-4 d-block" 
+        src="http://localhost:1337/uploads/Strapi2_4cd00a66f8.jpg" 
+        alt="Assignment 2B">
+    <div><style>
     .content-container { margin: 0 auto; max-width: 8.5in; padding: 20px; text-align: justify;} 
     .content-container p { margin-bottom: 15px;} 
     .content-container h3 { text-align: center; margin-bottom: 20px; } 
@@ -185,7 +205,9 @@ eleventyComputed:
 <p>Pagination made large datasets more manageable by breaking long posts into smaller, readable sections. It improves readability, enhances user experience, and prevents information overload. Pagination reduces page load times by fetching only a portion of the data at a time, lowers server load, and aids in SEO by allowing search engines to crawl and index content more efficiently. It optimizes content organization and ensures faster browsing, making it a crucial feature for content-heavy websites.</p>
 <p>I implemented pagination by creating a partial file containing the pagination buttons, and Eleventy handled most of the processing. In the Eleventy configuration, I specified which pages would include the pagination partial. A challenge I faced was understanding how to create the necessary metadata for pagination, as it initially seemed unclear. However, once I understood the concept, the implementation was straightforward, and the pagination now works seamlessly.</p>
 <p>NOTE: I tried to attempt to implement filtering, but EJS does not support 11ty filters.</p>
-</div></div></article>
+</div></div>
+  </article>
+  
 
             <nav aria-label="Page navigation" class="mt-4">
     <ul class="pagination justify-content-center">

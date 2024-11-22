@@ -401,6 +401,7 @@ export interface ApiAboutAbout extends Struct.SingleTypeSchema {
 export interface ApiAssignmentAssignment extends Struct.CollectionTypeSchema {
   collectionName: 'assignments';
   info: {
+    description: '';
     displayName: 'Assignment';
     pluralName: 'assignments';
     singularName: 'assignment';
@@ -413,6 +414,7 @@ export interface ApiAssignmentAssignment extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -533,6 +535,7 @@ export interface ApiLabLab extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::lab.lab'> &
       Schema.Attribute.Private;

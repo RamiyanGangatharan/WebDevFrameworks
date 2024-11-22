@@ -10,10 +10,15 @@
             crossorigin="anonymous">
     </head>
     <body>
-        <!-- Header -->
         <header>
             <%- include('../partials/header.ejs') %>
             <%- include('../partials/workHeader.ejs', { title: title }) %>
+            <% if (["Assignment 1A", "Assignment 1B", "Assignment 2A", "Assignment 2B"].includes(title)) { %>
+                <%- include('../partials/assignmentHeader.ejs') %>
+            <% } %>
+            <% if (["Lab 1A", "Lab 1B", "Lab 2A", "Lab 2B"].includes(title)) { %>
+                <%- include('../partials/labHeader.ejs') %>
+            <% } %>
         </header>
     
         <main class="container my-4">

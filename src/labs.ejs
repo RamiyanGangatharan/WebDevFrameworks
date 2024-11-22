@@ -9,7 +9,12 @@ pagination:
 eleventyComputed: 
     title: <%- post.Title %>
 ---
-
 <% pagination.items.forEach(post => { %>
-  <article><div><%- post.Content %></div></article>
-<% }); %>
+  <article>
+    <img 
+        class="rounded mx-auto mb-4 d-block" 
+        src="<%= post.Image ? 'http://localhost:1337' + post.Image.url : '/path-to-placeholder-image.jpg' %>" 
+        alt="<%= post.Title || 'No Title' %>">
+    <div><%- post.Content %></div>
+  </article>
+  <% }); %>
