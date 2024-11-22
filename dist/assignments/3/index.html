@@ -184,6 +184,7 @@ eleventyComputed:
 <h2>Pagination &amp; Filtering</h2>
 <p>Pagination made large datasets more manageable by breaking long posts into smaller, readable sections. It improves readability, enhances user experience, and prevents information overload. Pagination reduces page load times by fetching only a portion of the data at a time, lowers server load, and aids in SEO by allowing search engines to crawl and index content more efficiently. It optimizes content organization and ensures faster browsing, making it a crucial feature for content-heavy websites.</p>
 <p>I implemented pagination by creating a partial file containing the pagination buttons, and Eleventy handled most of the processing. In the Eleventy configuration, I specified which pages would include the pagination partial. A challenge I faced was understanding how to create the necessary metadata for pagination, as it initially seemed unclear. However, once I understood the concept, the implementation was straightforward, and the pagination now works seamlessly.</p>
+<p>NOTE: I tried to attempt to implement filtering, but EJS does not support 11ty filters.</p>
 </div></div></article>
 
             <nav aria-label="Page navigation" class="mt-4">

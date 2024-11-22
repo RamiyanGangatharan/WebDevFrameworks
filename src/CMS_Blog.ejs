@@ -18,7 +18,8 @@ pagination:
                 <div class="card shadow-sm h-100">
                     <div class="card-body">
                         <h2 class="card-title display-5 fw-bold mb-3"><%= post.Header %></h2>
-                        <div class="card-text">
+                        <img src="http://localhost:1337<%= post.Image.url %>" width="500" height="300">
+                        <div class="card-text mt-4">
                             <%- post.Content %>
                         </div>
                     </div>

@@ -2,7 +2,7 @@ import { marked } from 'marked';
 
 async function fetchStrapiData(endpoint, description) {
     try {
-        const response = await fetch(`http://localhost:1337/api/${endpoint}`);
+        const response = await fetch(`http://localhost:1337/api/${endpoint}?populate=*`);
         if (!response.ok) { throw new Error(`Failed to fetch ${description}: ${response.statusText}`);}
         return (await response.json()).data;
     } 
