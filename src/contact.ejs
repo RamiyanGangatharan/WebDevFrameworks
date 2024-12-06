@@ -1,0 +1,37 @@
+---
+layout: layout/mylayout.ejs
+title: Contact
+---
+
+<!-- https://tomanagle.medium.com/create-email-templates-with-ejs-and-send-them-with-mailgun-125601f318bb -->
+
+<div class="container mt-5" style="max-width: 500px;">
+    <h1 class="display-1 text-center">Contact Me</h1>
+    <form action="/" class="needs-validation" novalidate>
+      <div class="mb-3">
+        <label for="fname" class="form-label">First Name</label>
+        <input type="text" class="form-control" id="fname" name="fname" required>
+      </div>
+      <div class="mb-3">
+        <label for="lname" class="form-label">Last Name</label>
+        <input type="text" class="form-control" id="lname" name="lname" required>
+      </div>
+      <div class="mb-3">
+        <label for="phone" class="form-label">Phone Number</label>
+        <input type="tel" class="form-control" id="phone" name="phone">
+      </div>
+      <div class="mb-3">
+        <label for="mail" class="form-label">Email Address</label>
+        <input type="email" class="form-control" id="mail" name="mail" required>
+      </div>
+      <div class="mb-3">
+        <label for="subject" class="form-label">Subject</label>
+        <input type="text" class="form-control" id="subject" name="subject">
+      </div>
+      <div class="mb-3">
+        <label for="message" class="form-label">Message</label>
+        <textarea class="form-control" id="message" name="message" rows="8"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Submit</button>
+    </form>
+  </div>
