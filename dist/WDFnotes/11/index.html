@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Contact</title>
+        <title>WDF</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
             rel="stylesheet" 
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" 
@@ -48,87 +48,67 @@
         </header>
     
         <main class="container my-4">
-            
-<div class="container mt-5" style="max-width: 500px;">
-  <h1 class="display-1 text-center">Contact Me</h1>
-  <form id="contact-form" class="needs-validation" novalidate>
-    <div class="mb-3">
-      <label for="fname" class="form-label">First Name</label>
-      <input type="text" class="form-control" id="fname" name="fname" required>
-    </div>
-    <div class="mb-3">
-      <label for="lname" class="form-label">Last Name</label>
-      <input type="text" class="form-control" id="lname" name="lname" required>
-    </div>
-    <div class="mb-3">
-      <label for="phone" class="form-label">Phone Number</label>
-      <input type="tel" class="form-control" id="phone" name="phone">
-    </div>
-    <div class="mb-3">
-      <label for="mail" class="form-label">Email Address</label>
-      <input type="email" class="form-control" id="mail" name="mail" required>
-    </div>
-    <div class="mb-3">
-      <label for="subject" class="form-label">Subject</label>
-      <input type="text" class="form-control" id="subject" name="subject">
-    </div>
-    <div class="mb-3">
-      <label for="message" class="form-label">Message</label>
-      <textarea class="form-control" id="message" name="message" rows="8" required></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary w-100">Submit</button>
-  </form>
-
-  <div id="spinner" class="text-center mt-3" style="display: none;">
-    <div class="spinner-border" role="status">
-      <span class="visually-hidden">Loading...</span>
-    </div>
-  </div>
-
-  <div id="thank-you-message" class="alert alert-success mt-3" style="display: none;">
-    Thanks for reaching out. We'll get back to you soon!
-  </div>
+            <div class="container my-5">
+    
+        <article class="mb-5">
+            <div class="card shadow-sm p-4"><div class="content"><h3>Unit 2: Scalability in Microservices &amp; APIs</h3>
+<h4>What is a Microservice?</h4>
+<ul>
+<li><strong>Definition</strong>: A software architecture where an application is divided into loosely coupled, modular components.  <ul>
+<li>If one component fails, the system can still function, unlike a monolithic structure where a single failure can bring down the entire system.</li>
+</ul>
+</li>
+</ul>
+<h4>Why Use Microservices?</h4>
+<ol>
+<li><strong>Modularity</strong>  <ul>
+<li>Small, independent programs work together to form a larger application.</li>
+</ul>
+</li>
+<li><strong>Horizontal Scaling</strong>  <ul>
+<li>Applications can be distributed across multiple servers or computers for better performance.</li>
+</ul>
+</li>
+<li><strong>Content Delivery Network (CDN) Integration</strong>  <ul>
+<li>Edge locations (e.g., AWS services) reduce load on the main server.</li>
+</ul>
+</li>
+<li><strong>Security</strong>  <ul>
+<li>Each component (node) has its own security, isolating vulnerabilities.</li>
+</ul>
+</li>
+</ol>
+<h4>Microservices vs. APIs</h4>
+<ul>
+<li><strong>Microservices</strong>:  <ul>
+<li>Independent applications forming a larger system.  </li>
+<li>Enhance <strong>efficiency</strong> within the app.  </li>
+<li>Can be <strong>stateful</strong> or <strong>stateless</strong>.  </li>
+<li>Easier to scale due to minimal dependencies.  </li>
+<li>More <strong>secure</strong>, as they handle fewer transactional operations.</li>
+</ul>
+</li>
+<li><strong>APIs</strong>:  <ul>
+<li>Interfaces that allow two software components to communicate.  </li>
+<li>Aim to <strong>connect</strong> components (e.g., services, monoliths).  </li>
+<li>Classified by <strong>audience</strong>, <strong>protocol</strong>, and <strong>architecture</strong>.  </li>
+<li>Easier to debug due to their modular design.</li>
+</ul>
+</li>
+</ul>
+</div></div>
+        </article>
 </div>
 
-<script>
-  document.getElementById('contact-form').addEventListener('submit', async function (e) {
-    e.preventDefault();
+            <nav aria-label="Page navigation" class="mt-4">
+    <ul class="pagination justify-content-center">
+        <li class="page-item"><a class="page-link" href="/WDFnotes/10/">Previous</a></li>
+        
+        
 
-    const form = document.getElementById('contact-form');
-    const spinner = document.getElementById('spinner');
-    const thankYouMessage = document.getElementById('thank-you-message');
-
-    // Hide the form and show the spinner
-    form.style.display = 'none';
-    spinner.style.display = 'block';
-
-    // Collect form data
-    const formData = new FormData(form);
-    const data = Object.fromEntries(formData.entries());
-
-    try {
-      // Send data to the backend
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
-      });
-
-      // Handle the response
-      if (response.ok) {
-        spinner.style.display = 'none';
-        thankYouMessage.style.display = 'block';
-      } else {
-        throw new Error('Failed to send email');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      spinner.style.display = 'none';
-      alert('Something went wrong. Please try again.');
-      form.style.display = 'block'; // Show the form again on failure
-    }
-  });
-</script>
+        <li class="page-item"><a class="page-link" href="/WDFnotes/12/">Next</a></li>
+    </ul>
+</nav>
             
         </main>
 

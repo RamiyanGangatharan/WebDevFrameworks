@@ -5,7 +5,7 @@ title: Contact
 
 <div class="container mt-5" style="max-width: 500px;">
   <h1 class="display-1 text-center">Contact Me</h1>
-  <form action="/api/send-email" method="POST" class="needs-validation" novalidate>
+  <form id="contact-form" class="needs-validation" novalidate>
     <div class="mb-3">
       <label for="fname" class="form-label">First Name</label>
       <input type="text" class="form-control" id="fname" name="fname" required>
@@ -32,4 +32,54 @@ title: Contact
     </div>
     <button type="submit" class="btn btn-primary w-100">Submit</button>
   </form>
+
+  <div id="spinner" class="text-center mt-3" style="display: none;">
+    <div class="spinner-border" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+  </div>
+
+  <div id="thank-you-message" class="alert alert-success mt-3" style="display: none;">
+    Thanks for reaching out. We'll get back to you soon!
+  </div>
 </div>
+
+<script>
+  document.getElementById('contact-form').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const form = document.getElementById('contact-form');
+    const spinner = document.getElementById('spinner');
+    const thankYouMessage = document.getElementById('thank-you-message');
+
+    // Hide the form and show the spinner
+    form.style.display = 'none';
+    spinner.style.display = 'block';
+
+    // Collect form data
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      // Send data to the backend
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      // Handle the response
+      if (response.ok) {
+        spinner.style.display = 'none';
+        thankYouMessage.style.display = 'block';
+      } else {
+        throw new Error('Failed to send email');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      spinner.style.display = 'none';
+      alert('Something went wrong. Please try again.');
+      form.style.display = 'block'; // Show the form again on failure
+    }
+  });
+</script>

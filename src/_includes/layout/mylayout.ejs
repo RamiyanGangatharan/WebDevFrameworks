@@ -13,10 +13,10 @@
         <header>
             <%- include('../partials/header.ejs') %>
             <%- include('../partials/workHeader.ejs', { title: title }) %>
-            <% if (["Assignment 1A", "Assignment 1B", "Assignment 2A", "Assignment 2B"].includes(title)) { %>
+            <% if (["Assignment 1A", "Assignment 1B", "Assignment 2A", "Assignment 2B", "Assignment 3A", "Assignment 3B"].includes(title)) { %>
                 <%- include('../partials/assignmentHeader.ejs') %>
             <% } %>
-            <% if (["Lab 1A", "Lab 1B", "Lab 2A", "Lab 2B"].includes(title)) { %>
+            <% if (["Lab 1A", "Lab 1B", "Lab 2A", "Lab 2B", "Lab 3A", "Lab 3B" ].includes(title)) { %>
                 <%- include('../partials/labHeader.ejs') %>
             <% } %>
         </header>
@@ -27,10 +27,12 @@
                         "Strapi Blog", 
 
                         "Lab 1A", "Lab 1B", 
-                        "Lab 2A", "Lab 2B", 
+                        "Lab 2A", "Lab 2B",
+                        "Lab 3A", "Lab 3B",
 
                         "Assignment 1A", "Assignment 1B", 
                         "Assignment 2A", "Assignment 2B", 
+                        "Assignment 3A", "Assignment 3B",
 
                         "WDF", "CICS", "Placement"
                     ]
