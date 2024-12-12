@@ -101,10 +101,19 @@
             
 
   <article>
-    <img 
-        class="rounded mx-auto mb-4 d-block"
-        src="http://localhost:1337/uploads/Strapi2_4cd00a66f8.jpg" 
-        alt="Assignment 2B">
+    <!-- Loop through images -->
+    <div class="image-gallery">
+      
+        
+          <img 
+            class="rounded mx-auto mb-4 d-block"
+            src="http://localhost:1337/uploads/Strapi2_4cd00a66f8.jpg" 
+            alt="Assignment 2B">
+        
+      
+    </div>
+
+    <!-- Content Display -->
     <div><style>
     .content-container { margin: 0 auto; max-width: 8.5in; padding: 20px; text-align: justify;} 
     .content-container p { margin-bottom: 15px;} 
@@ -214,7 +223,8 @@ eleventyComputed:
 <p>NOTE: I tried to attempt to implement filtering, but EJS does not support 11ty filters.</p>
 </div></div>
   </article>
-  
+
+
 
             <nav aria-label="Page navigation" class="mt-4">
     <ul class="pagination justify-content-center">
